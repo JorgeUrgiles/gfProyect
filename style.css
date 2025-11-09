@@ -61,7 +61,7 @@ body {
 .modal-content {
     background: linear-gradient(135deg, #faf8f5 0%, #f5e9dc 100%);
     padding: 60px 50px;
-    border-radius: 30px;
+    border-radius: 0;
     text-align: center;
     max-width: 500px;
     box-shadow: 0 20px 80px rgba(212, 163, 115, 0.3);
@@ -109,7 +109,7 @@ body {
     font-size: 18px;
     font-family: var(--font-body);
     font-weight: 500;
-    border-radius: 50px;
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 8px 20px rgba(212, 163, 115, 0.3);
@@ -124,7 +124,7 @@ body {
    NAVEGACIÓN
    ========================================== */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     background: rgba(250, 248, 245, 0.95);
@@ -196,7 +196,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #faf8f5 0%, #f5e9dc 50%, #faf8f5 100%);
-    padding: 120px 40px 80px;
+    padding: 80px 40px 80px;
     position: relative;
     overflow: hidden;
 }
@@ -240,7 +240,7 @@ body {
 .hero-image {
     width: 280px;
     height: 280px;
-    border-radius: 50%;
+    border-radius: 0;
     object-fit: cover;
     border: 5px solid var(--primary-color);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -353,14 +353,15 @@ body {
 .image-wrapper {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 0;
     box-shadow: var(--shadow-soft);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: box-shadow 0.4s ease;
     margin-bottom: 20px;
+    width: 100%;
+    height: 400px;
 }
 
 .image-wrapper:hover {
-    transform: translateY(-10px);
     box-shadow: var(--shadow-medium);
 }
 
@@ -383,7 +384,7 @@ body {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, rgba(212, 163, 115, 0.9), rgba(139, 111, 71, 0.9));
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -391,7 +392,8 @@ body {
 }
 
 .image-wrapper:hover .image-overlay {
-    opacity: 1;
+    opacity: 0;
+    display: none;
 }
 
 .overlay-content {
@@ -470,7 +472,7 @@ body {
     }
     
     .hero-section {
-        padding: 100px 20px 60px;
+        padding: 60px 20px 60px;
     }
     
     .hero-title {
@@ -506,6 +508,10 @@ body {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .image-wrapper {
+        height: 350px;
     }
     
     .image-wrapper img {
