@@ -1,119 +1,212 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI-OSA-</title>
+    <title>Pamela & Jorge - Nuestro Álbum</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
-        alert("FELIZ CUMPLEAÑOS 27 AMOR DE MI VIDA!!!!")
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('birthday-modal').classList.add('show');
+            }, 500);
+        });
+
+        function closeModal() {
+            document.getElementById('birthday-modal').classList.remove('show');
+        }
     </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li> <a href="#1who">NOSOTROS</a></li>
-                    <li><a  href="#2what">ABOUT</a></li>
-                    <li> <a  href="#3where">FOTOS</a>
-                    </li>
-                </ul>
-            </div>
-            
+    <!-- Modal de cumpleaños -->
+    <div id="birthday-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-heart">♥</div>
+            <h2>¡Feliz Cumpleaños 27!</h2>
+            <p>Amor de mi vida</p>
+            <button onclick="closeModal()" class="modal-btn">Continuar ♥</button>
+        </div>
+    </div>
 
-
-
-
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">P & J</div>
+            <ul class="nav-menu">
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#historia" class="nav-link">Nuestra Historia</a></li>
+                <li><a href="#galeria" class="nav-link">Galería</a></li>
+            </ul>
         </div>
     </nav>
-    <div id="1who" class="b1 text-center container-fluid">
-        <h1>ALBUM DE PAMELA Y JORGE</h1>
-        <img style="display:inline" class="img-circle img-responsive" src="./imgs/p3.jpeg" alt="Aguila">
-        <h2>Estos son algunos de nuestros recuerdos!!!</h2>
-    </div>
-    <div id="2what" class="b2 text-center container-fluid">
-        <h3>
-            SOBRE NOSOTROS
-        </h3>
-        <p>
-           Nos conocimos en el 2014, en una discoteca famosa de la ciudad de Cuenca en aquella epoca. Desde el principio sentimos una conexion muy fuerte y nos enamoramos. Actualmente tenemos una relacion maravillosa en la cual prima el amor y apoyo incondicional.
-        </p>
-        
-    </div>
-    <div id="3where" class="b3 text-center container-fluid">
-        <h3>FOTOGRAFIAS</h3>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>
-                    Nuestra primera fotografia enel 2014, afuera de un evento de la Cruz Roja.
-                </p>
-                <img  class="img-width img-responsive" src="./imgs/1.jpg"  alt="garza">
-            </div>
-            <div class="col-sm-4">
-                <p>
-                    San Valentin 2015!!
-                
-                </p>
-                <img class=" img-width img-responsive" src="./imgs/2.jpg" alt="gaviota">
-            </div>
-            <div class="col-sm-4">
-                <p>
-                    Fin de año 2019!
-                </p>
-                <img class=" img-width img-responsive" src="./imgs/8.jpeg" alt="pelicano">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>
-                Canopy en Baños de Ambato!!!
-            </p>
-            <img class="img-width img-responsive" src="./imgs/3.jpeg" alt="garza">
-        </div>
-        <div class="col-sm-4">
-            <p>
-                Pailón del Diablo :)
-            </p>
-            <img class=" img-width img-responsive" src="./imgs/4.jpeg" alt="gaviota">
-        </div>
-        <div class="col-sm-4">
-            <p>
-                Viaje a Guayquil :D!!
-            </p>
-            <img class=" img-width img-responsive" src="./imgs/9.jpg" alt="pelicano">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>
-                Paninis y vino!!!
-            </p>
-            <img class="img-width img-responsive" src="./imgs/12.jpeg" alt="garza">
-        </div>
-        <div class="col-sm-4">
-            <p>
-                Cumpleaños en Yunguilla :o
-            </p>
-            <img class=" img-width img-responsive" src="./imgs/11.jpeg" alt="gaviota">
-        </div>
-        <div class="col-sm-4">
-            <p>
-                Chill and Chela 202!!!
-            </p>
-            <img class=" img-width img-responsive" src="./imgs/10.jpeg" alt="pelicano">
-        </div>
-    </div>
-</div>
 
+    <!-- Sección Hero -->
+    <section id="nosotros" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <img src="./imgs/p3.jpeg" alt="Pamela y Jorge" class="hero-image">
+            </div>
+            <h1 class="hero-title">Pamela & Jorge</h1>
+            <p class="hero-subtitle">Nuestro Álbum de Recuerdos</p>
+            <div class="hero-divider"></div>
+            <p class="hero-text">Estos son algunos de nuestros momentos más especiales</p>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="historia" class="about-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Historia</h2>
+            <div class="section-divider"></div>
+            <p class="about-text">
+                Nos conocimos en el 2014, en una discoteca famosa de la ciudad de Cuenca en aquella época. 
+                Desde el principio sentimos una conexión muy fuerte y nos enamoramos. Actualmente tenemos 
+                una relación maravillosa en la cual prima el amor y apoyo incondicional.
+            </p>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos -->
+    <section id="galeria" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Nuestras Fotografías</h2>
+            <div class="section-divider"></div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/1.jpg" alt="Primera fotografía 2014">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>2014</h3>
+                                <p>Nuestra primera fotografía</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Nuestra primera fotografía en el 2014, afuera de un evento de la Cruz Roja.</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/2.jpg" alt="San Valentín 2015">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>2015</h3>
+                                <p>San Valentín</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">San Valentín 2015!!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/8.jpeg" alt="Fin de año 2019">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>2019</h3>
+                                <p>Fin de Año</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Fin de año 2019!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/3.jpeg" alt="Canopy en Baños">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Aventura</h3>
+                                <p>Baños de Ambato</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Canopy en Baños de Ambato!!!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/4.jpeg" alt="Pailón del Diablo">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Naturaleza</h3>
+                                <p>Pailón del Diablo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Pailón del Diablo :)</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/9.jpg" alt="Viaje a Guayaquil">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Viajes</h3>
+                                <p>Guayaquil</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Viaje a Guayaquil :D!!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/12.jpeg" alt="Paninis y vino">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Momentos</h3>
+                                <p>Especiales</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Paninis y vino!!!</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/11.jpeg" alt="Cumpleaños en Yunguilla">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Celebración</h3>
+                                <p>Yunguilla</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Cumpleaños en Yunguilla :o</p>
+                </div>
+
+                <div class="gallery-item">
+                    <div class="image-wrapper">
+                        <img src="./imgs/10.jpeg" alt="Chill and Chela">
+                        <div class="image-overlay">
+                            <div class="overlay-content">
+                                <h3>Relax</h3>
+                                <p>Juntos</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Chill and Chela 202!!!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">♥ Pamela & Jorge ♥</p>
+            <p class="footer-date">Desde 2014</p>
+        </div>
+    </footer>
 
 </body>
-
 
 </html>
